@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct Games: Decodable {
+struct GamesResponse: Decodable {
     let results: [Result]?
 }
 
-struct Result: Codable {
-    let name, released, backgroundImage: String?
+struct Result: Decodable {
+    let name, released, background_image: String?
     let rating: Double?
     let genres: [Genre]?
 }
 
-struct Genre: Codable {
+struct Genre: Decodable {
     let name: String?
 }
 
